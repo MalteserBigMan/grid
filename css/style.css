@@ -21,8 +21,15 @@ ul {
 }
 
 .image-grid{
+    --min: 15ch;
+    --gap: 1rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
     gap: 1rem;
+}
+
+
+figure {
+    padding: 0;
+    margin: 0;
 }
